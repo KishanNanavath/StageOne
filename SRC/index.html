@@ -1,0 +1,58 @@
+<html lang="en" >
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+        <script type="text/javascript" src="./JS/app.js"></script>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body{
+                background-color: grey;
+            }
+        </style>
+    </head>
+    <body ng-app="myApp" ng-cloak>
+        <div ng-controller="MainCtrl">
+            <div ng-cloak layout-padding flex="35">
+                <md-card layout="column">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Programming Languages</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content layout-padding>
+                        <md-list>
+                            <md-list-item ng-repeat="lang in languages" ng-click="null">
+                                <md-icon style="color:blue">done</md-icon>
+                                <p>{{lang}}</p>
+                            </md-list-item>
+                        </md-list>
+                    </md-card-content>
+                </md-card>
+
+                <md-card layout="column">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">Operating Systems</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content layout-padding>
+                        <md-list>
+                            <md-list-item ng-repeat="os in oss" ng-click="null">
+                                <md-icon style="color:blue">done</md-icon>
+                                <p>{{os}}</p>
+                            </md-list-item>
+                        </md-list>
+                    </md-card-content>
+                </md-card>
+            </div>
+        </div>
+    </body>
+</html>
